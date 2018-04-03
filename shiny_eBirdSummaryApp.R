@@ -8,6 +8,8 @@ library(cowplot)
 setwd('C:/Users/birde/Dropbox/git/ebird/ShinySummaryApp')
 
 ### Start APP. Do not edit
+# Set max upload size to 30mb
+options(shiny.maxRequestSize=30*1024^2) 
 ui <- fluidPage(
   
   # App title ----
