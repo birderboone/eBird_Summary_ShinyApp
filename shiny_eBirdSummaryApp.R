@@ -3,11 +3,16 @@ library(ggplot2)
 library(gridExtra)
 library(RColorBrewer)
 library(cowplot)
-
-#Where is the APP and its components located?
-setwd('C:/Users/birde/Dropbox/git/ebird/ShinySummaryApp')
-
-### Start APP. Do not edit
+#
+#
+# The only thing you need to change is the working directory. 
+# Point it to the folder where the app and its components are located
+setwd('C:/Users/birde/Dropbox/ebird/ShinySummaryApp')
+#
+#
+### Click Start APP or select all and run. 
+# Do not edit below
+################################################
 # Set max upload size to 30mb
 options(shiny.maxRequestSize=30*1024^2) 
 ui <- fluidPage(
