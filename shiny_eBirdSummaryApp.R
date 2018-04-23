@@ -124,7 +124,7 @@ server<-function(input, output){
     
     #final$total[is.na(final$total)]<-0
     ggplot() + geom_polygon(data = final, aes(x=long, y = lat,group=group,fill=total),color='darkgray') + coord_fixed(1.3)+ 
-      scale_fill_gradientn(colours=myPalette(10),name='Total',na.value="white")+ geom_polygon(data = map.state, aes(x=long, y = lat,group=group),fill=NA,color='darkblue')
+      scale_fill_gradientn(colours=myPalette(10),name='Total Birds',na.value="white")+ geom_polygon(data = map.state, aes(x=long, y = lat,group=group),fill=NA,color='darkblue')
     
     #+scale_fill_continuous(low="thistle1", high="darkred", guide="colorbar",na.value="white") 
     
@@ -230,10 +230,10 @@ server<-function(input, output){
     
     ggplot()  +
       geom_tile(data=grid1,aes(x=long, y=lat),fill='lightgrey',alpha=.5,color='lightgray') +geom_raster(data=answer3, aes(x=long,y=lat,fill=value)) +
-      scale_fill_gradientn(colours = myPalette(10)) +
+      scale_fill_gradientn(colours = myPalette(10),name='Total Birds') +
       coord_fixed(1.3)+  geom_polygon(data = map.state, aes(x=long, y = lat,group=group),color='black',fill=NA)  +ggtitle(paste0(option1,' degree'))
     
-    
+  
     ##############
   })
   
